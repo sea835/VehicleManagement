@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VEHICLE CREATE</title>
+    <link rel="stylesheet" type="text/css" href="driverStyles.css">
+</head>
+<body>
+<h1>VEHICLE CREATE</h1>
+
+<form action="/Vehicle/api/create" method="post">
+
+    <label for="fuel">fuel:</label><br/>
+    <input type="number" name="fuel"><br/>
+
+    <label for="fuelRatio">Fuel Ratio :</label><br/>
+    <input type="number" name="fuelRatio"><br/>
+
+    <label for="weight">Weight:</label><br/>
+    <input type="number" name="weight"><br/>
+
+    <label for="dayMaintenance"> Day Maintenance:</label><br/>
+    <input type="text" name="dayMaintenance"><br/>
+
+    <label for="busy"> Busy:</label><br/>
+    <input type="number" name="busy"><br/>
+
+    <label for="performance"> History:</label><br/>
+    <input type="text" name="performance"><br/>
+
+    <button type="submit">Submit</button>
+
+</form>
+</body>
+</html>
