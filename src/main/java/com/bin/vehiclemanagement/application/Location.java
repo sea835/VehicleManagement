@@ -6,5 +6,6 @@ public enum Location {
     DaLat,
     CanTho,
     BuonMeThuot,
-    NhaTrang
+    NhaTrang,
+    Daklak
 }

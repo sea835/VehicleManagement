@@ -3,6 +3,8 @@ package com.bin.vehiclemanagement.model;
 import com.bin.vehiclemanagement.application.Location;
 import jakarta.persistence.*;
 
+import java.time.LocalDate;
+
 @Entity
 @Table
 public class Booking {
@@ -23,67 +25,13 @@ public class Booking {
     private Integer performance;
     private Long income;
     private String customerPhoneNum;
+    private String itemName;
+    private Integer weight;
+    private String customerName;
     private Location pickLocation;
     private Location endLocation;
+    private LocalDate date;
 
-    public Booking(Integer id,
-                   Integer tripCode,
-                   Integer driverId,
-                   Integer vehicleId,
-                   Integer performance,
-                   Long income) {
-        this.id = id;
-        this.tripCode = tripCode;
-        this.driverId = driverId;
-        this.vehicleId = vehicleId;
-        this.performance = performance  ;
-        this.income = income;
-    }
-
-    public Booking() {
-    }
-
-    public Booking(Integer id,
-                   Integer tripCode,
-                   Integer driverId,
-                   Integer vehicleId,
-                   Integer performance,
-                   Long income,
-                   String customerPhoneNum) {
-        this.id = id;
-        this.tripCode = tripCode;
-        this.driverId = driverId;
-        this.vehicleId = vehicleId;
-        this.performance = performance;
-        this.income = income;
-        this.customerPhoneNum = customerPhoneNum;
-    }
-
-    public Booking(Integer tripCode,
-                   Integer driverId,
-                   Integer vehicleId,
-                   Integer performance,
-                   Long income,
-                   String customerPhoneNum,
-                   Location pickLocation,
-                   Location endLocation) {
-        this.tripCode = tripCode;
-        this.driverId = driverId;
-        this.vehicleId = vehicleId;
-        this.performance = performance;
-        this.income = income;
-        this.customerPhoneNum = customerPhoneNum;
-        this.pickLocation = pickLocation;
-        this.endLocation = endLocation;
-    }
-
-    public String getCustomerPhoneNum() {
-        return customerPhoneNum;
-    }
-
-    public void setCustomerPhoneNum(String customerPhoneNum) {
-        this.customerPhoneNum = customerPhoneNum;
-    }
 
     public Integer getId() {
         return id;
@@ -133,6 +81,38 @@ public class Booking {
         this.income = income;
     }
 
+    public String getCustomerPhoneNum() {
+        return customerPhoneNum;
+    }
+
+    public void setCustomerPhoneNum(String customerPhoneNum) {
+        this.customerPhoneNum = customerPhoneNum;
+    }
+
+    public String getItemName() {
+        return itemName;
+    }
+
+    public void setItemName(String itemName) {
+        this.itemName = itemName;
+    }
+
+    public Integer getWeight() {
+        return weight;
+    }
+
+    public void setWeight(Integer weight) {
+        this.weight = weight;
+    }
+
+    public String getCustomerName() {
+        return customerName;
+    }
+
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
+    }
+
     public Location getPickLocation() {
         return pickLocation;
     }
@@ -149,6 +129,44 @@ public class Booking {
         this.endLocation = endLocation;
     }
 
+    public LocalDate getDate() {
+        return date;
+    }
+
+    public void setDate(LocalDate date) {
+        this.date = date;
+    }
+
+    public Booking(Integer id, Integer tripCode, Integer driverId, Integer vehicleId, Integer performance, Long income, String customerPhoneNum, String itemName, Integer weight, String customerName, Location pickLocation, Location endLocation, LocalDate date) {
+        this.id = id;
+        this.tripCode = tripCode;
+        this.driverId = driverId;
+        this.vehicleId = vehicleId;
+        this.performance = performance;
+        this.income = income;
+        this.customerPhoneNum = customerPhoneNum;
+        this.itemName = itemName;
+        this.weight = weight;
+        this.customerName = customerName;
+        this.pickLocation = pickLocation;
+        this.endLocation = endLocation;
+        this.date = date;
+    }
+
+    public Booking() {
+    }
+
+    public Booking(Integer tripCode, Integer driverId, Integer vehicleId, Integer performance, Long income, String customerPhoneNum, Location pickLocation, Location endLocation) {
+        this.tripCode = tripCode;
+        this.driverId = driverId;
+        this.vehicleId = vehicleId;
+        this.performance = performance;
+        this.income = income;
+        this.customerPhoneNum = customerPhoneNum;
+        this.pickLocation = pickLocation;
+        this.endLocation = endLocation;
+    }
+
     @Override
     public String toString() {
         return "Booking{" +
@@ -159,7 +177,12 @@ public class Booking {
                 ", performance=" + performance +
                 ", income=" + income +
                 ", customerPhoneNum='" + customerPhoneNum + '\'' +
+                ", itemName='" + itemName + '\'' +
+                ", weight=" + weight +
+                ", customerName='" + customerName + '\'' +
                 ", pickLocation=" + pickLocation +
+                ", endLocation=" + endLocation +
+                ", date=" + date +
                 '}';
     }
 }

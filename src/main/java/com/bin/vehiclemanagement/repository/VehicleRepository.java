@@ -14,4 +14,6 @@ public interface VehicleRepository extends JpaRepository<Vehicle, Integer> {
     @Query("SELECT v FROM Vehicle v WHERE v.vehicleType=?1 AND v.busy=false ORDER BY v.performance DESC")
     public Optional<Vehicle> findByVehicleType(VehicleType vehicleType);
 
+    @Query("SELECT v FROM Vehicle v WHERE v.busy=false ORDER BY v.id")
+    public  Optional<Vehicle> findByDayMaintenanceAndBusy();
 }
