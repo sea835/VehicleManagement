@@ -1,0 +1,47 @@
+.bus_price {
+  max-width: 1200px;
+  margin: 20px auto;
+}
+.bus_price_list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+.bus_price_item {
+  border: 1px solid #ccc;
+  border-radius: 15px;
+}
+.bus_price_item_top {
+  position: relative;
+}
+.bus_price_item_top img {
+  width: 100%;
+  object-fit: cover;
+}
+.bus_price_item_top .bus_price_address {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  color: white;
+  padding: 5px 10px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.bus_price_address p {
+  font-weight: bold;
+}
+.bus_price_item_body {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border-bottom: 1px solid #ccc;
+}
+.bus_price_item_body h2 {
+  color: #11760f;
+}
+.bus_price_item_body .bus_price_item_body_price {
+  display: flex;
+  justify-content: space-between;
+}

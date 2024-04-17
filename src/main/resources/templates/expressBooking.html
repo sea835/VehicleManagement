@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Express booking</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="expressBooking.css" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="sidebar_content">
+        <form action="/booking/create" method="post">
+          <div class="field_group">
+            <div class="field">
+              <label for="">Name</label>
+              <input type="text" name="customerName"/>
+            </div>
+            <div class="field">
+              <label for="">Phone number</label>
+              <input type="text" name="customerPhoneNum"/>
+            </div>
+            <div class="field">
+              <label for="">Item name</label>
+              <input type="text" name = "itemName" />
+            </div>
+            <div class="field">
+              <label for="">Weight</label>
+              <input type="text" name="weight" />
+            </div>
+         
+           
+          </div>
+          <div class="field_group_row">
+            <div class="field">
+              <label>Pickup Location</label>
+              <select name="pickLocation">
+                <option value="null"></option>
+                <option value="HoChiMinh">Hồ Chí Minh City</option>
+                <option value="DaLat">Đà Lạt</option>
+                <option value="NhaTrang">Nha Trang</option>
+                <option value="DaNang">Đà Nẵng</option>
+                <option value="Daklak">Đăk Lăk</option>
+                <option value="CanTho">Cần Thơ</option>
+              </select>
+            </div>
+            <div class="field">
+              <label>Destination</label>
+              <select name="endLocation">
+                <option value="null"></option>
+                <option value="DaLat">Đà Lạt</option>
+                <option value="HoChiMinh">Hồ Chí Minh City</option>
+                <option value="NhaTrang">Nha Trang</option>
+                <option value="DaNang">Đà Nẵng</option>
+                <option value="Daklak">Đăk Lăk</option>,
+                <option value="CanTho">Cần Thơ</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="">Date</label>
+            <input type="date" name="date"/>
+          </div>
+          <div class="field">
+            <label for="">Note</label>
+            <textarea name="" cols="30" rows="10"></textarea>
+          </div>
+          <button class="btn">
+            <span>Submit</span>
+            <i class="bx bx-chevron-right"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+    <h1 class="title-main">EXPRESS FORM</h1>
+  </body>
+</html>
