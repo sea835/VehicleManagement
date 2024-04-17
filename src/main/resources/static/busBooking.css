@@ -1,0 +1,132 @@
+body {
+  background-image: url(../images/bus.png);
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+}
+.title-main {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  margin-right: 10%;
+  font-size: 50px;
+  font-weight: bold;
+}
+.sidebar {
+  margin: 50px;
+  padding: 20px 40px;
+  width: 400px;
+  background: white;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.sidebar .sidebar_back {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.sidebar_content h1 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #3751fe;
+}
+.sidebar_content-desc {
+  margin-top: 17px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar_content p {
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.field_group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.field_group_row {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.field select {
+  outline: none;
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.field {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.field label {
+  font-weight: 400;
+}
+.field input {
+  outline: none;
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 10px;
+}
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-login {
+  text-align: center;
+}
+
+.btn-login button {
+  padding: 15px 20px;
+  background: #3751fe;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+.forgot-password {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* login fail */
+
+.password_error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+  font-weight: bold;
+}
+.btn {
+  padding: 10px 20px;
+  background-color: #136af3;
+  color: white;
+  border-radius: 10px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* booking fail */
+.booking_fail {
+  color: red;
+  margin-top: 10px;
+  font-weight: bold;
+}

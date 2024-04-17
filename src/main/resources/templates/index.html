@@ -1,34 +1,465 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>VMS Home</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="header.css" />
-  </head>
-  <body>
-    <header>
-      <div class="navbar">
-        <div class="logo">
-          <span>VMS</span>
-        </div>
-        <ul class="menu_list">
-          <li class="menu_item"><a href="search.html">Search</a></li>
-          <li class="menu_item"><a href="price.html">Price</a></li>
-          <li class="menu_item"><a href="contact.html">Contact</a></li>
-        </ul>
-        <button class="btn btn-login">
-          <a href="login.html">Login</a>
-        </button>
-      </div>
-    </header>
-    <main class="container">
-      <div class="button_list">
-        <button><a href="busBooking.html">Booking Bus</a></button>
-        <button><a href="expressBooking.html">Express</a></button>
-      </div>
-    </main>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Đình Thuận Fanclub</title>
+        
+        <!-- Favicons -->
+        <link href="/assets/img/3CSchool_logo.png" rel="icon">
+        <link href="/assets/img/3CSchool_logo.png" rel="apple-touch-icon">
     
-  </body>
+        
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+        <!-- Vendor CSS Files -->
+        <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link href="/assets/vendor/aos/aos.css" rel="stylesheet">
+        <link href="/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+        <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+        <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    
+        <!-- Main CSS File -->
+        <link href="/assets/css/style.css" rel="stylesheet">
+        <link href="/main.css" rel="stylesheet">
+    </head>
+
+<body>
+
+<!-- ======= Header ======= -->
+<header id="header" class="header fixed-top">
+<div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+    <a href="index.html" class="logo d-flex align-items-center">
+    <img src="/assets/img/3CSchool_logo.png" alt="">
+    <span>VMS</span>
+    </a>
+
+    <nav id="navbar" class="navbar">
+    <ul>
+        <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+        <li><a class="nav-link scrollto" href="#about">About</a></li>
+        <li><a class="nav-link scrollto" href="#services">Services</a></li>
+        <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        <li><a class="getstarted scrollto" href="./login" methods="get">Login / Sign up</a></li>
+    </ul>
+    <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav><!-- .navbar -->
+
+</div>
+</header><!-- End Header -->
+
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="hero d-flex align-items-center">
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <h1 data-aos="fade-up">Welcome to Dinh Thuan Fanclub logistic</h1>
+            <h2 data-aos="fade-up" data-aos-delay="400">Câu giới thiệu l gì đó (có thể bỏ đi hoặc đổi thành logo cty hoặc cc gì đó mà t chưa nghĩ ra)</h2>
+        </div>
+    </div>
+
+    <div class="row" style="margin-top: 11%;" data-aos="fade-up" data-aos-delay="400">
+        <!-- Bus Ticket -->
+        <div class="col-md-6">
+            <div class="card text-center" style="border-radius: 21px;">
+                <div class="card-body">
+                    <h5 class="card-title">Find Bus Ticket</h5>
+                    <form>
+                        <div class="row">
+                            <div class="col-md-5">
+                                <label for="fromFindBus" class="form-label">From</label>
+                                <select class="form-select" id="fromFindBus">
+                                    <option value="" disabled selected>Select your option</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                            <div class="col-md-2">
+                                <div class = "d-flex justify-content-center align-items-end h-100">
+                                    <i class="bi bi-caret-right-fill" style="font-size: 1.5em;"></i>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <label for="toFindBus" class="form-label">To</label>
+                                <select class="form-select" id="toFindBus">
+                                    <option value="" disabled selected>Select your option</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit" class="landingButton" style="margin-top: 1em; ">Find</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card text-center" style="border-radius: 21px;">
+                <div class="card-body">
+                    <h5 class="card-title">Express price Calculator</h5>
+                    <form>
+                        <div class="row">
+                            <div class="col-md-2">
+                                <label for="weightCal" class="form-label">Weight</label>
+                                <select class="form-select" id="weightCal">
+                                    <option value="" disabled selected>kg</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="fromFindBus" class="form-label">From</label>
+                                <select class="form-select" id="fromFindBus">
+                                    <option value="" disabled selected>Select your option</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                            <div class="col-md-2">
+                                <div class = "d-flex justify-content-center align-items-end h-100">
+                                    <i class="bi bi-caret-right-fill" style="font-size: 1.5em;"></i>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="toFindBus" class="form-label">To</label>
+                                <select class="form-select" id="toFindBus">
+                                    <option value="" disabled selected>Select your option</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit" class="landingButton" style="margin-top: 1em; ">Calcualate</button>    
+                    </form>
+                </div>
+            </div>
+        </div>
+</div>
+
+</section><!-- End Hero -->
+
+<main id="main">
+
+<!-- ======= About Section ======= -->
+<section id="about" class="about">
+
+    <div class="container" data-aos="fade-up">
+        <div class="row gx-0">
+
+            <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
+                <div class="content">
+                    <h3>About Us</h3>
+                    <h2>Dinh Thuan Logistic</h2>
+                    <p>
+                        Dinh Thuan Logistic stands out as a dynamic force in logistics, blending innovation and efficiency seamlessly. With a focus on excellence and a customer-centric approach, they offer trusted solutions in supply chain management. Join us as we explore the world of Dinh Thuan Logistic, where innovation meets reliability in logistics.
+                    </p>
+                    <div class="text-center text-lg-start">
+                        <a href="" class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
+                            <span>Read more</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
+                <img src="http://placehold.it//1920x1080" class="img-fluid" alt="">
+            </div>
+
+        </div>
+    </div>
+
+</section><!-- End About Section -->
+
+
+<!-- ======= Services Section ======= -->
+<section id="services" class="services">
+
+    <div class="container" data-aos="fade-up">
+
+    <header class="section-header">
+        <h2>Services</h2>
+    </header>
+
+    <div class="row gy-4">
+
+        <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-box blue">
+            <i class="ri-discuss-line icon"></i>
+            <h3>Dinh Thuan Bus</h3>
+            <a href="" class="read-more"><span>Read more</span> <i class="bi bi-arrow-right"></i></a>
+        </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="350">
+        <div class="service-box green">
+            <i class="ri-discuss-line icon"></i>
+            <h3>Dinh Thuan Express</h3>
+            <a href="" class="read-more"><span>Read more</span> <i class="bi bi-arrow-right"></i></a>
+        </div>
+        </div>
+
+    </div>
+
+    </div>
+
+</section><!-- End Services Section -->
+
+
+<!-- ======= Features Section ======= -->
+<section id="features" class="features">
+
+    <div class="container" data-aos="fade-up">
+
+    <header class="section-header">
+        <!-- <h2>Features</h2> -->
+        <p>Our Advantage</p>
+    </header>
+
+    <div class="row">
+
+        <div class="col-lg-6">
+        <img src="http://placehold.it//1920x1080" class="img-fluid" alt="">
+        </div>
+
+        <div class="col-lg-6 mt-5 mt-lg-0 d-flex">
+        <div class="row align-self-center gy-4">
+
+            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="200">
+            <div class="feature-box d-flex align-items-center">
+                <i class="bi bi-check"></i>
+                <h3>Affordable prices</h3>
+            </div>
+            </div>
+
+            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="300">
+            <div class="feature-box d-flex align-items-center">
+                <i class="bi bi-check"></i>
+                <h3>Wide range of choices</h3>
+            </div>
+            </div>
+
+            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="400">
+            <div class="feature-box d-flex align-items-center">
+                <i class="bi bi-check"></i>
+                <h3>Fast service</h3>
+            </div>
+            </div>
+
+            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="500">
+            <div class="feature-box d-flex align-items-center">
+                <i class="bi bi-check"></i>
+                <h3>Flexibility in travel schedules</h3>
+            </div>
+            </div>
+
+            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="600">
+            <div class="feature-box d-flex align-items-center">
+                <i class="bi bi-check"></i>
+                <h3>Efficient and reliable transportation</h3>
+            </div>
+            </div>
+
+            <div class="col-md-6" data-aos="zoom-out" data-aos-delay="700">
+            <div class="feature-box d-flex align-items-center">
+                <i class="bi bi-check"></i>
+                <h3>Convenient online booking system</h3>
+            </div>
+            </div>
+
+        </div>
+        </div>
+
+    </div> <!-- / row -->
+
+    <!-- Feature Tabs -->
+    <div class="row feture-tabs" data-aos="fade-up">
+        <div class="col-lg-6">
+        <h3>More Specific</h3>
+
+        <!-- Tabs -->
+        <ul class="nav nav-pills mb-3">
+            <li>
+            <a class="nav-link active" data-bs-toggle="pill" href="#tab1">Bus</a>
+            </li>
+            <li>
+            <a class="nav-link" data-bs-toggle="pill" href="#tab2">Express</a>
+            </li>
+        </ul><!-- End Tabs -->
+
+        <!-- Tab Content -->
+        <div class="tab-content">
+
+            <div class="tab-pane fade show active" id="tab1">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium officiis delectus a officia, rem rerum sapiente doloremque libero totam magni nesciunt cupiditate beatae dolorum molestiae ipsum adipisci sunt, debitis sit.</p>
+
+
+            </div><!-- End Tab 1 Content -->
+
+            <div class="tab-pane fade show" id="tab2">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia vitae minima voluptatem sit? Iure, amet. Facilis, dolores assumenda. Cumque amet voluptatum sint optio, magni ad explicabo nobis ut. Atque, dolore.</p>
+            
+           
+            </div><!-- End Tab 2 Content -->
+
+            <div class="tab-pane fade show" id="tab3">
+            <p>Consequuntur inventore voluptates consequatur aut vel et. Eos doloribus expedita. Sapiente atque consequatur minima nihil quae aspernatur quo suscipit voluptatem.</p>
+            <div class="d-flex align-items-center mb-2">
+                <i class="bi bi-check2"></i>
+                <h4>Repudiandae rerum velit modi et officia quasi facilis</h4>
+            </div>
+            <p>Laborum omnis voluptates voluptas qui sit aliquam blanditiis. Sapiente minima commodi dolorum non eveniet magni quaerat nemo et.</p>
+            <div class="d-flex align-items-center mb-2">
+                <i class="bi bi-check2"></i>
+                <h4>Incidunt non veritatis illum ea ut nisi</h4>
+            </div>
+            <p>Non quod totam minus repellendus autem sint velit. Rerum debitis facere soluta tenetur. Iure molestiae assumenda sunt qui inventore eligendi voluptates nisi at. Dolorem quo tempora. Quia et perferendis.</p>
+            </div><!-- End Tab 3 Content -->
+
+        </div>
+
+        </div>
+
+        <div class="col-lg-6">
+        <img src="http://placehold.it//1920x1080" class="img-fluid" alt="">
+        </div>
+
+    </div><!-- End Feature Tabs -->
+
+
+    </div>
+
+</section><!-- End Features Section -->
+
+
+<!-- ======= Contact Section ======= -->
+<section id="contact" class="contact">
+
+    <div class="container" data-aos="fade-up">
+
+    <header class="section-header">
+        <h2>Contact</h2>
+        <p>Send Message To Us</p>
+    </header>
+
+    <div class="row gy-4">
+
+        <div class="col-lg-12">
+        <form action="forms/contact.php" method="post" class="php-email-form">
+            <div class="row gy-4">
+
+            <div class="col-md-6">
+                <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+            </div>
+
+            <div class="col-md-6 ">
+                <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+            </div>
+
+            <div class="col-md-12">
+                <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+            </div>
+
+            <div class="col-md-12">
+                <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
+            </div>
+
+            <div class="col-md-12 text-center">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                <button type="submit">Send Message</button>
+            </div>
+
+            </div>
+        </form>
+
+        </div>
+
+    </div>
+
+    </div>
+
+</section><!-- End Contact Section -->
+
+</main><!-- End #main -->
+
+<!-- ======= Footer ======= -->
+<footer id="footer" class="footer">
+
+<div class="footer-top">
+    <div class="container">
+    <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-info">
+        <a href="index.html" class="logo d-flex align-items-center">
+            <img src="/assets/img/3CSchool_logo.png" alt="">
+            <span>Dinh Thuan Fanclub</span>
+        </a>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia nesciunt quasi maiores eveniet! Nobis expedita corporis recusandae repellat, exercitationem voluptas qui ad fugiat quas earum numquam voluptatem ipsum dolore autem?</p>
+        <div class="social-links mt-3">
+            <a href="" class="facebook"><i class="bi bi-facebook"></i></a>
+        </div>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+        <h4>Useful Links</h4>
+        <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="">Home</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#about">About us</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#services">Services</a></li>
+        </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+        <h4>Our Services</h4>
+        <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="">Express</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="">Bus</a></li>
+        </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+        <h4>Contact Us</h4>
+        <p>
+            <strong>Phone:</strong> +84 973 860 829<br>
+            <strong>Email:</strong> dinhthuan@hcmut.edu.vn<br>
+        </p>
+
+        </div>
+
+    </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="copyright">
+    &copy; Copyright <strong><span>Dinh Thuan Logistic</span></strong>. All Rights Reserved
+    </div>
+</div>
+</footer><!-- End Footer -->
+
+<a href="" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="/assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+<script src="/assets/vendor/aos/aos.js"></script>
+<script src="./assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+<!-- Main JS File -->
+<script src="/assets/js/main.js"></script>
+
+</body>
+
 </html>
