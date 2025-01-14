@@ -21,6 +21,8 @@ public class Driver {
     private String phoneNum;
     private String address;
     private String license;
+
+    //-------------------------------------------
     private Long salary;
     private String history;
     private Location location;
@@ -87,6 +89,13 @@ public class Driver {
         this.salary = salary;
         this.history = history;
         this.location = location;
+    }
+
+    public Driver(String name, String phoneNum, String address, String license) {
+        this.name = name;
+        this.phoneNum = phoneNum;
+        this.address = address;
+        this.license = license;
     }
 
     public Boolean getBusy() {
@@ -171,6 +180,8 @@ public class Driver {
                 ", license='" + license + '\'' +
                 ", salary=" + salary +
                 ", history='" + history + '\'' +
+                ", location=" + location +
+                ", busy=" + busy +
                 '}';
     }
 }

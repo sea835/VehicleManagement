@@ -10,13 +10,13 @@ import java.time.LocalDate;
 public class Booking {
     @Id
     @SequenceGenerator(
-            name = "driver_sequence",
-            sequenceName = "driver_sequence",
+            name = "booking_sequence",
+            sequenceName = "booking_sequence",
             allocationSize = 1
     )
     @GeneratedValue(
             strategy = GenerationType.SEQUENCE,
-            generator = "driver_sequence"
+            generator = "booking_sequence"
     )
     private Integer id;
     private Integer tripCode;

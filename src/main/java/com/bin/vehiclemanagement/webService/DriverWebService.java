@@ -34,11 +34,11 @@ public class DriverWebService {
     }
 
     public String createDriver(){
-        return "driverCreate";
+        return "driverRegisterForm";
     }
 
     public void createDriver(Driver driver, Model model){
-        //System.out.println(driver.toString());
+        System.out.println(driver.toString());
         driverRepository.save(driver);
         //return "driverCreate";
     }
